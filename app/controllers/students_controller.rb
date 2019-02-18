@@ -10,15 +10,15 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find(params[:id])
-    if @student.active == false 
-      @student.active = true 
+    if @student.active == false
+      @student.active = true
       @student.save
       redirect_to student_path(@student)
-    else 
-      @student.active = false 
-      @student.save 
+    else
+      @student.active = false
+      @student.save
       redirect_to student_path(@student)
-    end 
+    end
   end
 
   private
